@@ -7,7 +7,7 @@ import EFQRCode
 
 let content = "https://github.com/EFPrefix/EFQRCode"
 
-if let tryImage = EFQRCode.generate(for: content) {
+if let tryImage = OEFQRCode.generate(for: content) {
     print("Create QRCode image success")
     tryImage
 } else {

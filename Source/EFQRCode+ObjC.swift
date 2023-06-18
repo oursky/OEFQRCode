@@ -64,14 +64,14 @@ extension EFQRCodeGenerator {
 
     @available(swift, obsoleted: 1.0)
     public func generateGIF(watermarkGIF data: Data) -> Data? {
-        return EFQRCode.generateGIF(using: self, withWatermarkGIF: data)
+        return OEFQRCode.generateGIF(using: self, withWatermarkGIF: data)
     }
 
     @available(swift, obsoleted: 1.0)
     public func generateGIF(watermarkGIF data: Data,
                             delay: Double, loopCount: Int,
                             useMultipleThreads: Bool) -> Data? {
-        return EFQRCode.generateGIF(
+        return OEFQRCode.generateGIF(
             using: self, withWatermarkGIF: data,
             delay: delay, loopCount: loopCount,
             useMultipleThreads: useMultipleThreads

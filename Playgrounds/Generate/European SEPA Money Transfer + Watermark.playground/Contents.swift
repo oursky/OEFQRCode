@@ -27,7 +27,7 @@ https://github.com/EFPrefix/EFQRCode
 //: - Note: In production code, you should abstract this data to a struct with some basic checks. For example - limit the size of the Remittance fields in order to not generate large QR codes (According to the spec: "Maximum QR code version 13, equivalent to module size 69 or 331 byte payload")
 
 //: 2. Generate a basic QR code (and scan this with a European banking app).
-if let tryImage = EFQRCode.generate(
+if let tryImage = OEFQRCode.generate(
     for: belgianRedCrossEPC,
     inputCorrectionLevel: .m // medium - 15% ECC
 ) {
@@ -35,7 +35,7 @@ if let tryImage = EFQRCode.generate(
 }
 //: 3. Make it fancy - add a **watermark** image.
 let redCross = UIImage(named: "red-cross-logo.png")?.cgImage
-if let tryImage = EFQRCode.generate(
+if let tryImage = OEFQRCode.generate(
     for: belgianRedCrossEPC,
     inputCorrectionLevel: .m, // medium - 15% ECC
     watermark: redCross
@@ -44,7 +44,7 @@ if let tryImage = EFQRCode.generate(
 }
 
 //: - Experiment: Set `watermarkIsTransparent` to `false` in order to get a different style.
-if let tryImage = EFQRCode.generate(
+if let tryImage = OEFQRCode.generate(
     for: belgianRedCrossEPC,
     inputCorrectionLevel: .m, // medium - 15% ECC
     watermark: redCross, watermarkIsTransparent: false

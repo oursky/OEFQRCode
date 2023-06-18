@@ -32,7 +32,7 @@ import CoreImage
 #endif
 
 /// Swift convenient API for EFQRCode module.
-public enum EFQRCode {
+public enum OEFQRCode {
     // MARK: - Recognizer
     #if canImport(CoreImage)
 
@@ -145,6 +145,6 @@ public enum EFQRCode {
             .withMagnification(magnification)
             .withPointOffset(pointOffset)
             .withStyledTimingPoint(isTimingPointStyled)
-        return EFQRCode.generateGIF(using: generator, withWatermarkGIF: watermark)
+        return OEFQRCode.generateGIF(using: generator, withWatermarkGIF: watermark)
     }
 }

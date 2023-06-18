@@ -155,7 +155,7 @@ A String Array is returned as there might be several QR Codes in a single `CGIma
 
 ```swift
 if let testImage = UIImage(named: "test.png")?.cgImage {
-    let codes = EFQRCode.recognize(testImage)
+    let codes = OEFQRCode.recognize(testImage)
     if !codes.isEmpty {
         print("There are \(codes.count) codes")
         for (index, code) in codes.enumerated() {
@@ -180,7 +180,7 @@ Create QR Code image, basic usage:
 |`watermark`|Background image of QRCode|
 
 ```swift
-if let image = EFQRCode.generate(
+if let image = OEFQRCode.generate(
     for: "https://github.com/EFPrefix/EFQRCode",
     watermark: UIImage(named: "WWF")?.cgImage
 ) {
@@ -196,7 +196,7 @@ Result:
 
 #### 4. Generation from GIF
 
-Use `EFQRCode.generateGIF` to create GIF QRCode.
+Use `OEFQRCode.generateGIF` to create GIF QRCode.
 
 |Parameter|Description|
 |-:|:-|
@@ -206,7 +206,7 @@ Use `EFQRCode.generateGIF` to create GIF QRCode.
 |`loopCount`|Times looped in GIF, emitted means no change|
 
 ```swift
-if let qrCodeData = EFQRCode.generateGIF(
+if let qrCodeData = OEFQRCode.generateGIF(
     using: generator, withWatermarkGIF: data
 ) {
     print("Create QRCode image success.")

@@ -28,7 +28,7 @@ import CoreGraphics
 import Foundation
 
 // MARK: - Deprecated
-extension EFQRCode {
+extension OEFQRCode {
     @available(*, deprecated, renamed: "generate(for:encoding:size:backgroundColor:foregroundColor:watermark:watermarkMode:inputCorrectionLevel:icon:iconSize:watermarkIsTransparent:pointShape:mode:magnification:pointOffset:)")
     public static func generate(
         content: String,
@@ -234,7 +234,7 @@ extension EFQRCodeGenerator {
 #if canImport(CoreImage)
 import CoreImage
 
-extension EFQRCode {
+extension OEFQRCode {
     @available(*, deprecated, renamed: "recognize(_:)")
     public static func recognize(image: CGImage?) -> [String]? {
         guard let image = image else { return nil }

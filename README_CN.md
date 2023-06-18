@@ -156,7 +156,7 @@ import EFQRCode
 
 ```swift
 if let testImage = UIImage(named: "test.png")?.cgImage {
-    let codes = EFQRCode.recognize(testImage)
+    let codes = OEFQRCode.recognize(testImage)
     if !codes.isEmpty {
         print("There are \(codes.count) codes")
         for (index, code) in codes.enumerated() {
@@ -181,7 +181,7 @@ if let testImage = UIImage(named: "test.png")?.cgImage {
 |`watermark`|背景水印图|
 
 ```swift
-if let image = EFQRCode.generate(
+if let image = OEFQRCode.generate(
     for: "https://github.com/EFPrefix/EFQRCode",
     watermark: UIImage(named: "WWF")?.cgImage
 ) {
@@ -207,7 +207,7 @@ if let image = EFQRCode.generate(
 |`loopCount`|输出的动态 QRCode 的循环次数，默认从输入的 GIF 图片获取|
 
 ```swift
-if let qrCodeData = EFQRCode.generateGIF(
+if let qrCodeData = OEFQRCode.generateGIF(
     using: generator, withWatermarkGIF: data
 ) {
     print("Create QRCode image success.")

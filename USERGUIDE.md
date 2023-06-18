@@ -7,7 +7,7 @@
 There are two equivalent ways:
 
 ```swift
-EFQRCode.recognize(CGImage)
+OEFQRCode.recognize(CGImage)
 ```
 
 or
@@ -23,7 +23,7 @@ Because of the possibility that more than one QR code exist in the same image, t
 Again, there are two equivalent ways of doing this:
 
 ```swift
-EFQRCode.generate(
+OEFQRCode.generate(
     for: String, encoding: String.Encoding,
     inputCorrectionLevel: EFInputCorrectionLevel,
     size: EFIntSize, magnification: EFIntSize?,
@@ -264,7 +264,7 @@ First you should get the complete `Data` of a GIF file
 
 > **NOTE**: You shall not get `Data` from `UIImage` as it only provides the first frame.
 
-Then you can create GIF QRCode with `EFQRCode.generateGIF`:
+Then you can create GIF QRCode with `OEFQRCode.generateGIF`:
 
 |Parameter|Description|
 |-:|:-|
@@ -274,7 +274,7 @@ Then you can create GIF QRCode with `EFQRCode.generateGIF`:
 |`loopCount`|Times looped in GIF, emitted means no change|
 
 ```swift
-if let qrcodeData = EFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
+if let qrcodeData = OEFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
     print("Create QRCode image success.")
 } else {
     print("Create QRCode image failed!")

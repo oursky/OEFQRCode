@@ -228,7 +228,7 @@ extension GeneratorController {
         case .gif(let data)?: // GIF
             generator.withWatermark(nil, mode: watermarkMode)
             
-            if let afterData = EFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
+            if let afterData = OEFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
                 present(ShowController(image: .gif(afterData)), animated: true)
             } else {
                 alertCreationFailure()

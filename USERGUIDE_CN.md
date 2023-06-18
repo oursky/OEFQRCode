@@ -3,7 +3,7 @@
 ## 1. 二维码识别
 
 ```swift
-EFQRCode.recognize(CGImage)
+OEFQRCode.recognize(CGImage)
 ```
 
 或
@@ -17,7 +17,7 @@ EFQRCodeRecognizer(image: CGImage).recognize()
 ## 2. 二维码生成
 
 ```swift
-EFQRCode.generate(
+OEFQRCode.generate(
     for: String, encoding: String.Encoding,
     inputCorrectionLevel: EFInputCorrectionLevel,
     size: EFIntSize, magnification: EFIntSize?,
@@ -269,7 +269,7 @@ square | circle | diamond
 |`loopCount`|输出的动态 QRCode 的循环次数，默认从输入的 GIF 图片获取|
 
 ```swift
-if let qrcodeData = EFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
+if let qrcodeData = OEFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
     print("Create QRCode image success.")
 } else {
     print("Create QRCode image failed!")

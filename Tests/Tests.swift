@@ -64,7 +64,7 @@ class Tests: XCTestCase {
         XCTAssertNotNil(testResult, "testResult is nil!")
 
         // This is an example of EFQRCodeRecognizer test case.
-        let testResultArray = EFQRCode.recognize(testResult!)
+        let testResultArray = OEFQRCode.recognize(testResult!)
         XCTAssertFalse(testResultArray.isEmpty, "testResultArray has no result!")
         XCTAssertEqual(testResultArray[0], content, "testResultArray is wrong!")
     }
@@ -85,7 +85,7 @@ class Tests: XCTestCase {
         XCTAssertNotNil(testResult, "testResult is nil!")
 
         // This is an example of EFQRCodeRecognizer test case.
-        let testResultArray = EFQRCode.recognize(testResult!)
+        let testResultArray = OEFQRCode.recognize(testResult!)
         XCTAssertFalse(testResultArray.isEmpty, "testResultArray has no result!")
         XCTAssertEqual(testResultArray[0], content, "testResultArray is wrong!")
     }
@@ -106,7 +106,7 @@ class Tests: XCTestCase {
         XCTAssertNotNil(testResult, "testResult is nil!")
 
         // This is an example of EFQRCodeRecognizer test case.
-        let testResultArray = EFQRCode.recognize(testResult!)
+        let testResultArray = OEFQRCode.recognize(testResult!)
         XCTAssertFalse(testResultArray.isEmpty, "testResultArray has no result!")
         XCTAssertEqual(testResultArray[0], content, "testResultArray is wrong!")
     }
@@ -146,7 +146,7 @@ class Tests: XCTestCase {
 
     // EFQRCode
     func testExampleEFQRCode() {
-        let testResult = EFQRCode.generate(for: "https://github.com/EFPrefix/EFQRCode")
+        let testResult = OEFQRCode.generate(for: "https://github.com/EFPrefix/EFQRCode")
         XCTAssertNotNil(testResult, "testResult is nil!")
     }
 }

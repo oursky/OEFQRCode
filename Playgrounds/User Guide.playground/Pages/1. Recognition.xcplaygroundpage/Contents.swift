@@ -4,7 +4,7 @@
 */
 import EFQRCode
 import UIKit
-guard let cgImage = EFQRCode.generate(for: "Hello World") else {
+guard let cgImage = OEFQRCode.generate(for: "Hello World") else {
     fatalError("Something went wrong. Goodbye.")
 }
 /*:
@@ -12,10 +12,10 @@ guard let cgImage = EFQRCode.generate(for: "Hello World") else {
  There are two equivalent ways:
 
  ```swift
- EFQRCode.recognize(CGImage)
+ OEFQRCode.recognize(CGImage)
  ```
 */
-EFQRCode.recognize(cgImage)
+OEFQRCode.recognize(cgImage)
 /*:
  ```
  EFQRCodeRecognizer(image: CGImage).recognize()

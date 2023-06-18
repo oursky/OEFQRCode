@@ -211,7 +211,7 @@ extension ViewController: NSAlertDelegate {
         case .gif(let data)?: // GIF
             generator.withWatermark(nil, mode: watermarkMode)
             
-            if let afterData = EFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
+            if let afterData = OEFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
                 generatorViewImage.image = NSImage(data: afterData)
                 result = afterData
             } else {

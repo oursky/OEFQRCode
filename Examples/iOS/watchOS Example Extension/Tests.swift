@@ -134,7 +134,7 @@ final class Tests {
 
     // EFQRCode
     func testExampleEFQRCode() -> String? {
-        let testResult = EFQRCode.generate(for: "https://github.com/EFPrefix/EFQRCode")
+        let testResult = OEFQRCode.generate(for: "https://github.com/EFPrefix/EFQRCode")
         return testResult == nil ? Localized.errored : .passed
     }
 }

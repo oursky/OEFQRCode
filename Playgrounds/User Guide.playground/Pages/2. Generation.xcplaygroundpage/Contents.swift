@@ -5,17 +5,17 @@
 import EFQRCode
 import UIKit
 //: The return value is of type `CGImage?`
-EFQRCode.generate(for: "Hello World")
+OEFQRCode.generate(for: "Hello World")
 //:  because if something went wrong during generation, let's say content length exceeded capacity constraint, for example, then `nil` will be returned.
-EFQRCode.generate(for: "Hello World" * 200)
+OEFQRCode.generate(for: "Hello World" * 200)
 /*:
  Again, there are two equivalent ways of doing this:
 
  ---
 
- #### Method 1: with EFQRCode.generate
+ #### Method 1: with OEFQRCode.generate
  ```swift
- EFQRCode.generate(
+ OEFQRCode.generate(
      for: String, encoding: String.Encoding,
      inputCorrectionLevel: EFInputCorrectionLevel,
      size: EFIntSize, magnification: EFIntSize?,
@@ -29,7 +29,7 @@ EFQRCode.generate(for: "Hello World" * 200)
  )
  ```
 */
-EFQRCode.generate(
+OEFQRCode.generate(
     for: "https://github.com/EyreFree/EFQRCode", encoding: .utf8,
     inputCorrectionLevel: .l,
     size: EFIntSize(width: 350, height: 350), magnification: nil,

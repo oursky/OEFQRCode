@@ -90,10 +90,10 @@ EFQRCodeGenerator(content: urlForEFQRCode)
  Magnification is defined as the ratio of actual size to the smallest possible size, and defaults to `nil`.
  */
 //: - Experiment: Directly setting the `size` parameter results in low resolution QR code images,
-EFQRCode.generate(for: urlForEFQRCode,
+OEFQRCode.generate(for: urlForEFQRCode,
                   size: EFIntSize(width: 351, height: 351))
 //: so setting the `magnification` is recommended instead:
-EFQRCode.generate(for: urlForEFQRCode,
+OEFQRCode.generate(for: urlForEFQRCode,
                   magnification: EFIntSize(width: 9, height: 9))
 //: If you already have a desired size in mind, we have two helpers methods at your disposal to calculate the magnification that results in the closet dimension.
 let desiredSize: CGFloat = 520
@@ -124,8 +124,8 @@ if let minMagnification = generatorForMagnification
 
  Background color defaults to white, foreground color (for code points) defaults to black.
  */
-EFQRCode.generate(for: urlForEFQRCode, foregroundColor: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).cgColor)
-EFQRCode.generate(for: urlForEFQRCode, backgroundColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor)
+OEFQRCode.generate(for: urlForEFQRCode, foregroundColor: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).cgColor)
+OEFQRCode.generate(for: urlForEFQRCode, backgroundColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor)
 //: - Experiment: Design a high-contrast color theme:
 EFQRCodeGenerator(content: urlForEFQRCode)
     .withColors(backgroundColor: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1).cgColor,
@@ -159,7 +159,7 @@ EFQRCodeGenerator(content: urlForEFQRCode)
 
  Background watermark image, defaults to `nil`.
  */
-EFQRCode.generate(for: urlForEFQRCode)
+OEFQRCode.generate(for: urlForEFQRCode)
 // - Experiment: Setting a background watermark image:
 let watermark = #imageLiteral(resourceName: "eyrefree.png").cgImage
 EFQRCodeGenerator(content: urlForEFQRCode)
@@ -183,7 +183,7 @@ EFQRCodeGenerator(content: urlForEFQRCode)
  */
 //: - Experiment: Use a watermark image with alpha channel:
 let transparentWatermark = #imageLiteral(resourceName: "transparent.png").cgImage
-EFQRCode.generate(
+OEFQRCode.generate(
     for: urlForEFQRCode,
     backgroundColor: #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1).cgColor, foregroundColor: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).cgColor,
     watermark: transparentWatermark /*, watermarkIsTransparent: true */
@@ -216,11 +216,11 @@ EFQRCodeGenerator(content: urlForEFQRCode)
  - Experiment: See how different point shapes look like.
  */
 //: - Example: Circle
-EFQRCode.generate(for: urlForEFQRCode, pointStyle: .circle)
+OEFQRCode.generate(for: urlForEFQRCode, pointStyle: .circle)
 //: - Example: Diamond
-EFQRCode.generate(for: urlForEFQRCode, pointStyle: .diamond)
+OEFQRCode.generate(for: urlForEFQRCode, pointStyle: .diamond)
 //: - Example: Diamond everything!
-EFQRCode.generate(for: urlForEFQRCode,
+OEFQRCode.generate(for: urlForEFQRCode,
                   pointStyle: .diamond, isTimingPointStyled: true)
 
 //: [2. Generation](@previous) | [3. Generation from GIF](@next)

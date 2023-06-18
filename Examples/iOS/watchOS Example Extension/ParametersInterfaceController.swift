@@ -313,7 +313,7 @@ class ParametersInterfaceController: WKInterfaceController {
         case .gif(let data)?: // GIF
             // TODO: Confirm if possible to even have this case on watchOS
             generator.withWatermark(nil, mode: watermarkMode)
-            if let afterData = EFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
+            if let afterData = OEFQRCode.generateGIF(using: generator, withWatermarkGIF: data) {
                 return EFImage.gif(afterData)
             }
         case .normal(let uiImage)?:

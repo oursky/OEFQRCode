@@ -8,7 +8,7 @@ import EFQRCode
 */
 //: - Experiment: Add your own QR code image to Resources folder, and try reading the contents out of it:
 if let testImage = UIImage(named: "test.png")?.cgImage {
-    let codes = EFQRCode.recognize(testImage)
+    let codes = OEFQRCode.recognize(testImage)
     if !codes.isEmpty {
         print("There are \(codes.count) codes")
         for (index, code) in codes.enumerated() {
@@ -31,9 +31,9 @@ if let testImage = UIImage(named: "test.png")?.cgImage {
  - watermark: Background image of QRCode
 */
 //: - Experiment: Generate your own QR code image:
-EFQRCode.generate(for: "Hello World")
+OEFQRCode.generate(for: "Hello World")
 //: - Experiment: Add a background image to Resources folder and generate with it:
-if let image = EFQRCode.generate(
+if let image = OEFQRCode.generate(
     for: "https://github.com/EFPrefix/EFQRCode",
     watermark: UIImage(named: "background")?.cgImage
 ) {
@@ -52,7 +52,7 @@ if let image = EFQRCode.generate(
 //: - Experiment: Add a GIF to Resouces folder and try generating an animated QRCode:
 let gif = Data() // TODO: replace with actual gif data
 let generator = EFQRCodeGenerator(content: "OwO")
-EFQRCode.generateGIF(using: generator, withWatermarkGIF: gif)
+OEFQRCode.generateGIF(using: generator, withWatermarkGIF: gif)
 
 //: #### 5. Next
 //: Learn more from "`User Guide.playground`" in the same folder.

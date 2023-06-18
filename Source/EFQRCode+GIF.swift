@@ -34,7 +34,7 @@ import MobileCoreServices
 import CoreServices
 #endif
 
-extension EFQRCode {
+extension OEFQRCode {
     private static let framesPerSecond = 24
 
     private static func batchWatermark(frames: inout [CGImage], generator: EFQRCodeGenerator, start: Int, end: Int) {
